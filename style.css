@@ -83,6 +83,7 @@ body {
 .home-text p.objective {
   font-size: 1.1rem;
   line-height: 1.6;
+  z-index: 2;
 }
 
 .home-image {
