@@ -97,7 +97,17 @@ body {
   object-fit: cover;
   position: relative;
   z-index: 2;
+
+  /* transition əlavə et */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
+
+/* Hover zamanı zoom effekti */
+.home-image img:hover {
+  transform: scale(1.1); /* 1.1 = 10% böyümə */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* optional: daha gözəl effek üçün shadow */
+}
+
 
 /* Animated Shapes Behind Profile */
 .home-image::before {
