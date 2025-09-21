@@ -97,17 +97,14 @@ body {
   object-fit: cover;
   position: relative;
   z-index: 2;
-
-  /* transition əlavə et */
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 /* Hover zamanı zoom effekti */
 .home-image img:hover {
-  transform: scale(1.1); /* 1.05 = 5% böyümə */
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* optional: daha gözəl effek üçün shadow */
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
-
 
 /* Animated Shapes Behind Profile */
 .home-image::before {
@@ -328,6 +325,21 @@ section {
   .skills-grid {
     justify-content: left;
   }
+
+  /* Shapes adjustment */
+  .home-image::before {
+    width: 400px;
+    height: 400px;
+    top: -60px;
+    left: -60px;
+  }
+
+  .home-image::after {
+    width: 150px;
+    height: 120px;
+    bottom: -40px;
+    right: -50px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -359,6 +371,21 @@ section {
   section {
     padding: 20px 5%;
   }
+
+  /* Shapes adjustment */
+  .home-image::before {
+    width: 300px;
+    height: 300px;
+    top: -40px;
+    left: -40px;
+  }
+
+  .home-image::after {
+    width: 100px;
+    height: 80px;
+    bottom: -30px;
+    right: -30px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -384,5 +411,20 @@ section {
 
   .project-overlay p {
     font-size: 14px;
+  }
+
+  /* Shapes adjustment */
+  .home-image::before {
+    width: 200px;
+    height: 200px;
+    top: -20px;
+    left: -20px;
+  }
+
+  .home-image::after {
+    width: 70px;
+    height: 60px;
+    bottom: -20px;
+    right: -20px;
   }
 }
