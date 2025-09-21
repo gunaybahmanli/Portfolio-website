@@ -100,53 +100,59 @@ body {
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-/* Hover zamanı zoom effekti */
 .home-image img:hover {
   transform: scale(1.1);
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-/* Animated Shapes Behind Profile */
+/* Animated Shapes Behind Profile (Responsive + Animated) */
 .home-image::before,
 .home-image::after {
+  content: "";
   position: absolute;
   border-radius: 50%;
-  content: "";
   z-index: 1;
   opacity: 0.3;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-/* Main shapes */
+/* Main shape 1 */
 .home-image::before {
-  top: -10%;
-  left: -10%;
+  background: #6A5ACD;
   width: 50%;
   height: 50%;
-  background: #6A5ACD;
-  animation: float1 8s ease-in-out infinite alternate;
+  top: -10%;
+  left: -10%;
+  animation-name: float1;
+  animation-duration: 8s;
 }
 
+/* Main shape 2 */
 .home-image::after {
-  bottom: -5%;
-  right: -10%;
+  background: #6b9dfe;
   width: 20%;
   height: 15%;
-  background: #6b9dfe;
+  bottom: -5%;
+  right: -10%;
   opacity: 0.2;
   z-index: 0;
-  animation: float2 10s ease-in-out infinite alternate;
+  animation-name: float2;
+  animation-duration: 10s;
 }
 
+/* Float animations responsive with % instead of px */
 @keyframes float1 {
   0% { transform: translate(0,0) scale(1); }
-  50% { transform: translate(3%, -3%) scale(1.05); }
-  100% { transform: translate(0, -6%) scale(1.1); }
+  50% { transform: translate(5%, -5%) scale(1.05); }
+  100% { transform: translate(0, -10%) scale(1.1); }
 }
 
 @keyframes float2 {
   0% { transform: translate(0,0) scale(1); }
-  50% { transform: translate(-2%, 2%) scale(1.1); }
-  100% { transform: translate(0, 4%) scale(1.05); }
+  50% { transform: translate(-5%, 5%) scale(1.1); }
+  100% { transform: translate(0, 8%) scale(1.05); }
 }
 
 /* FULL SCREEN SECTIONS */
@@ -307,44 +313,81 @@ section {
     text-align: center;
   }
 
-  .home-text h1 { font-size: 2.2rem; }
-  .home-text h2 { font-size: 1.6rem; }
+  .home-text h1 {
+    font-size: 2.2rem;
+  }
 
-  .home-image img { max-width: 300px; margin-top: 20px; }
+  .home-text h2 {
+    font-size: 1.6rem;
+  }
 
-  .about-grid { grid-template-columns: 1fr; }
-  .skills-grid { justify-content: left; }
+  .home-image img {
+    max-width: 300px;
+    margin-top: 20px;
+  }
 
-  /* Shapes adjustment */
-  .home-image::before { width: 45%; height: 45%; top: -5%; left: -5%; }
-  .home-image::after { width: 20%; height: 15%; bottom: -5%; right: -5%; }
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    justify-content: left;
+  }
 }
 
 @media (max-width: 768px) {
-  .navbar { flex-direction: column; gap: 10px; padding: 10px 5%; }
-  .nav-left { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 5%;
+  }
 
-  .home-text h1 { font-size: 2rem; }
-  .home-text h2 { font-size: 1.4rem; }
+  .nav-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 
-  .home-image img { max-width: 200px; }
-  section { padding: 20px 5%; }
+  .home-text h1 {
+    font-size: 2rem;
+  }
 
-  /* Shapes adjustment */
-  .home-image::before { width: 40%; height: 40%; top: -4%; left: -4%; }
-  .home-image::after { width: 18%; height: 12%; bottom: -4%; right: -4%; }
+  .home-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .home-image img {
+    max-width: 200px;
+  }
+
+  section {
+    padding: 20px 5%;
+  }
 }
 
 @media (max-width: 480px) {
-  .home-text h1 { font-size: 1.6rem; }
-  .home-text h2 { font-size: 1.2rem; }
+  .home-text h1 {
+    font-size: 1.6rem;
+  }
 
-  .home-image img { max-width: 150px; }
-  .project-card img { height: 150px; }
-  .project-overlay h3 { font-size: 20px; }
-  .project-overlay p { font-size: 14px; }
+  .home-text h2 {
+    font-size: 1.2rem;
+  }
 
-  /* Shapes adjustment */
-  .home-image::before { width: 35%; height: 35%; top: -3%; left: -3%; }
-  .home-image::after { width: 15%; height: 10%; bottom: -3%; right: -3%; }
+  .home-image img {
+    max-width: 150px;
+  }
+
+  .project-card img {
+    height: 150px;
+  }
+
+  .project-overlay h3 {
+    font-size: 20px;
+  }
+
+  .project-overlay p {
+    font-size: 14px;
+  }
 }
