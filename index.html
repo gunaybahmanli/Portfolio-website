@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gunay Bahmanli | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="#home">Home</a>
+      <a href="#education-experience">Education & Experience</a>
+      <a href="#certifications-skills">Certifications & Skills</a>
+      <a href="#projects">Projects</a>
+    </div>
+  </nav>
+
+  <!-- HOME SECTION -->
+<section id="home" class="home-section">
+  <div class="home-content">
+    <div class="home-text">
+      <h1 class="name">Gunay Bahmanli</h1>
+      <h2 class="highlight2" id="typing"></h2>
+      <p class="objective">
+        I am fascinated by the way raw data reflects real life. My objective is to give that data 
+        a voice - to translate it into insights that guide better decisions and move ideas forward.
+      </p>
+    </div>
+    <div class="home-image">
+      <img src="images\profil2.jpg" alt="Gunay Bahmanli">
+    </div>
+  </div>
+</section>
+
+<script>
+  const text = "I'm Data Analyst";
+  const typingElement = document.getElementById("typing");
+  let i = 0;
+  let deleting = false;
+
+  function typeLoop() {
+    if (!deleting) {
+      typingElement.innerHTML = text.slice(0, i);
+      i++;
+      if (i > text.length) {
+        deleting = true;
+        setTimeout(typeLoop, 1500); // yazı tamamlandıqdan sonra bir az dayan
+        return;
+      }
+    } else {
+      i--;
+      typingElement.innerHTML = text.slice(0, i);
+      if (i === 0) {
+        deleting = false;
+      }
+    }
+    setTimeout(typeLoop, deleting ? 50 : 100); // silmə daha sürətli, yazma yavaş
+  }
+
+  window.onload = typeLoop;
+</script>
+
+
+
+  <!-- EDUCATION & EXPERIENCE SECTION -->
+  <section id="education-experience" class="about-section">
+    <h2>Education & Experience</h2>
+    <div class="about-grid two-column-grid">
+      <div class="about-card education-card">
+        <h3>Education</h3>
+        <br>
+        <p><strong>Databyte</strong><br>Data analysis bootcamp - Oracle SQL, PL/SQL, Power BI (2022)</p>
+        <br>
+        <p><strong>Azerbaijan University of Economics</strong><br>Bachelor’s Degree in Economics (2016-2020)<br>GPA: 4.0</p>
+      </div>
+      <div class="about-card experience-card">
+        <h3>Experience</h3>
+        <br>
+        <ul>
+          <li><strong>Data Analyst</strong> – DataLead Consulting (Mar 2025 – Present)</li>
+          <br>
+          <li><strong>Lead HR Specialist</strong> – Saffron Group (Feb 2022 – Mar 2025)</li>
+          <br>
+          <li><strong>HR Specialist</strong> – SofistiCo Consulting (Sep 2021 – Feb 2022)</li>
+          <br>
+          <li><strong>HR Officer</strong> – AT-Geotech (Oct 2020 – Aug 2021)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS & SKILLS SECTION -->
+  <section id="certifications-skills" class="about-section">
+    <h2>Certifications & Skills</h2>
+    <div class="about-grid two-column-grid">
+      <div class="about-card certifications-card">
+        <h3>Certifications</h3>
+        <ul class="cert-list">
+          <li><img src="images\AIHR-Digital-Logo.png" alt=""> AIHR – People Analytics Specialist (2024)</li>
+          <li><img src="images\twitter_thumb_201604_image.png" alt=""> Microsoft Office Specialist: Excel Expert (MO-211)</li>
+          <li><img src="images\twitter_thumb_201604_image (1).png" alt=""> Microsoft Certified: Power BI Data Analyst Associate</li>
+          <li><img src="images\07_SQL_Associate__1_.png" alt=""> Oracle Database SQL Certified Associate (1Z0-071)</li>
+          <li><img src="images\ielts-logo-png_seeklogo-322547.png" alt=""> IELTS Academic – Overall Band 7.0</li>
+        </ul>
+      </div>
+      <div class="about-card skills-card">
+        <h3>Skills</h3>
+        <div class="skills-grid">
+          <span>Excel</span>
+          <span>Power BI</span>
+          <span>Tableau</span>
+          <span>Apache Superset</span>
+          <span>SQL</span>
+          <span>Python</span>
+          <span>Pandas</span>
+          <span>Matplotlib</span>
+          <span>Seaborn</span>
+          <span>Git</span>
+          <span>Pentaho</span>
+          <span>Apache Airflow</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="projects-section">
+    <h2>My Projects</h2>
+    <div class="projects-grid">
+
+      <a href="project1.html" class="project-card">
+        <img src="images\node-logo.webp" alt="Project 1">
+        <div class="project-overlay">
+          <h3>Project 1</h3>
+          <p>Qısa məlumat bu layihə haqqında.</p>
+        </div>
+      </a>
+
+      <a href="project2.html" class="project-card">
+        <img src="images/project2.jpg" alt="Project 2">
+        <div class="project-overlay">
+          <h3>Project 2</h3>
+          <p>Qısa məlumat bu layihə haqqında.</p>
+        </div>
+      </a>
+
+      <a href="project3.html" class="project-card">
+        <img src="images/project3.jpg" alt="Project 3">
+        <div class="project-overlay">
+          <h3>Project 3</h3>
+          <p>Qısa məlumat bu layihə haqqında.</p>
+        </div>
+      </a>
+
+      <a href="project4.html" class="project-card">
+        <img src="images/project4.jpg" alt="Project 4">
+        <div class="project-overlay">
+          <h3>Project 4</h3>
+          <p>Qısa məlumat bu layihə haqqında.</p>
+        </div>
+      </a>
+
+      <a href="project5.html" class="project-card">
+        <img src="images/project5.jpg" alt="Project 5">
+        <div class="project-overlay">
+          <h3>Project 5</h3>
+          <p>Qısa məlumat bu layihə haqqında.</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+</body>
+</html>

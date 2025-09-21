@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 4 | Gunay Bahmanli</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Geri ox */
+    .back-arrow {
+      position: fixed;
+      top: 20px;
+      right: 1rem;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: #333;
+      background-color: #f8f8f8;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      transition: background-color 0.3s ease, color 0.3s ease;
+      z-index: 1000;
+      overflow: hidden;
+    }
+
+    .back-arrow:hover {
+      color: #7B5FFF;
+      background-color: #eaeaff;
+      transform: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .back-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1.8rem;
+        top: 1rem;
+        right: 1rem;
+      }
+    }
+
+    /* Project main image styling */
+    .project-main-image {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 12px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+
+    /* Project sections */
+    .project-section {
+      padding: 40px 5%;
+      background-color: #f8f8f8;
+    }
+
+    .project-section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .project-section p, .project-section ul, .project-section pre {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .project-section ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    .project-section pre {
+      background-color: #eee;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+
+    .project-section img {
+      margin: 15px 0;
+      width: 100%;
+      max-width: 600px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Geri ox -->
+  <a href="index.html#projects" class="back-arrow">&#8592;</a>
+
+  <!-- PROJECT HEADER -->
+  <section class="project-header project-section">
+    <h1>Project 4: Travel Data Dashboard</h1>
+    <p>Short description: Visualizing travel patterns, costs, and preferences to analyze trends for tourism insights.</p>
+    <img src="images/project4.jpg" alt="Project 4" class="project-main-image">
+  </section>
+
+  <!-- INTRODUCTION -->
+  <section class="project-section">
+    <h2>Introduction</h2>
+    <p>
+      This project analyzes travel data including destinations, accommodation types, transportation, and traveler demographics.
+      The goal is to provide insights for tourism companies to optimize packages and marketing strategies.
+    </p>
+  </section>
+
+  <!-- OBJECTIVE -->
+  <section class="project-section">
+    <h2>Objective</h2>
+    <p>
+      To understand travel trends, customer preferences, and spending patterns, enabling better decision-making for tour operators.
+    </p>
+  </section>
+
+  <!-- DATA & TOOLS -->
+  <section class="project-section">
+    <h2>Data & Tools</h2>
+    <ul>
+      <li>Dataset: Travel transactions and customer demographics</li>
+      <li>Tools: Python, Pandas, Matplotlib, Seaborn, Power BI</li>
+      <li>Excel for pre-processing and summary statistics</li>
+    </ul>
+  </section>
+
+  <!-- METHODOLOGY -->
+  <section class="project-section">
+    <h2>Methodology</h2>
+    <p>
+      Data cleaning, feature engineering, and analysis of travel durations, costs, and transportation choices were performed.
+      Interactive dashboards were built in Power BI to visualize insights.
+    </p>
+  </section>
+
+  <!-- CODE SNIPPETS -->
+  <section class="project-section">
+    <h2>Python Scripts</h2>
+    <p>Example Python code to calculate total travel cost per destination:</p>
+    <pre>
+import pandas as pd
+
+data = pd.read_csv("travel_data.csv")
+total_cost = data.groupby('Destination')['Transportation_cost', 'Accommodation_cost'].sum()
+print(total_cost)
+    </pre>
+  </section>
+
+  <!-- VISUALIZATIONS -->
+  <section class="project-section">
+    <h2>Visualizations</h2>
+    <img src="images/project4_chart1.png" alt="Destination cost chart">
+    <img src="images/project4_chart2.png" alt="Traveler demographics chart">
+    <p>Charts display cost distribution per destination, traveler age groups, and accommodation preferences.</p>
+  </section>
+
+  <!-- INSIGHTS -->
+  <section class="project-section">
+    <h2>Insights & Conclusion</h2>
+    <ul>
+      <li>Popular destinations correlate with lower transportation costs.</li>
+      <li>Most travelers prefer mid-range accommodations.</li>
+      <li>Python and Pandas analysis helped identify top destinations and cost patterns.</li>
+    </ul>
+  </section>
+
+</body>
+</html>

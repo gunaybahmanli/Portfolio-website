@@ -1,0 +1,378 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+}
+
+.nav-left a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.nav-left a:hover {
+  color: #7B5FFF;
+  transition: color 0.3s ease;
+}
+
+/* HOME SECTION */
+.home-section {
+  padding-top: 100px; /* navbar üçün əlavə boşluq */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background-color: #f8f8f8;
+  position: relative;
+}
+
+.home-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  width: 90%;
+  flex-wrap: wrap;
+}
+
+.home-text {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.home-text h1.name {
+  font-size: 2.5rem;
+  margin-left: -5px;
+}
+
+.home-text h2.highlight2 {
+  font-size: 2rem;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  color: #6b9dfe;
+  min-height: 2.5rem;
+}
+
+.home-text p.objective {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.home-image {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.home-image img {
+  max-width: 550px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+/* Animated Shapes Behind Profile */
+.home-image::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  width: 650px;
+  height: 650px;
+  background: #6A5ACD;
+  opacity: 0.3;
+  border-radius: 50%;
+  z-index: 1;
+  animation: float1 8s ease-in-out infinite alternate;
+}
+
+.home-image::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  right: -100px;
+  width: 250px;
+  height: 200px;
+  background: #6b9dfe;
+  opacity: 0.2;
+  border-radius: 50%;
+  z-index: 0;
+  animation: float2 10s ease-in-out infinite alternate;
+}
+
+@keyframes float1 {
+  0% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(30px,-30px) scale(1.05); }
+  100% { transform: translate(0,-60px) scale(1.1); }
+}
+
+@keyframes float2 {
+  0% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(-20px,20px) scale(1.1); }
+  100% { transform: translate(0,40px) scale(1.05); }
+}
+
+/* FULL SCREEN SECTIONS */
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 5%;
+  position: relative;
+}
+
+/* EDUCATION & EXPERIENCE */
+#education-experience {
+  background-color: #f8f8f8;
+}
+
+#education-experience h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.education-card, .experience-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 30px;
+  position: relative;
+}
+
+/* CERTIFICATIONS & SKILLS */
+#certifications-skills {
+  background-color: #f8f8f8;
+}
+
+#certifications-skills h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.certifications-card, .skills-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 30px;
+  position: relative;
+}
+
+.cert-list li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cert-list img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: left;
+}
+
+.skills-grid span {
+  background: #6A5ACD;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* PROJECTS SECTION */
+.projects-section {
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.projects-section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+.project-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(70%);
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(123, 95, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+  text-align: center;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-overlay h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.project-overlay p {
+  font-size: 16px;
+}
+
+/* Responsive CSS */
+@media (max-width: 1024px) {
+  .home-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .home-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .home-image img {
+    max-width: 300px;
+    margin-top: 20px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    justify-content: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 5%;
+  }
+
+  .nav-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .home-text h1 {
+    font-size: 2rem;
+  }
+
+  .home-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .home-image img {
+    max-width: 200px;
+  }
+
+  section {
+    padding: 20px 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .home-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .home-image img {
+    max-width: 150px;
+  }
+
+  .project-card img {
+    height: 150px;
+  }
+
+  .project-overlay h3 {
+    font-size: 20px;
+  }
+
+  .project-overlay p {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 2 | Gunay Bahmanli</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Geri ox */
+    .back-arrow {
+      position: fixed;
+      top: 20px;
+      right: 1rem;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: #333;
+      background-color: #f8f8f8;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      transition: background-color 0.3s ease, color 0.3s ease;
+      z-index: 1000;
+      overflow: hidden;
+    }
+
+    .back-arrow:hover {
+      color: #7B5FFF;
+      background-color: #eaeaff;
+      transform: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .back-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1.8rem;
+        top: 1rem;
+        right: 1rem;
+      }
+    }
+
+    /* Project main image styling */
+    .project-main-image {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 12px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+
+    /* Project sections */
+    .project-section {
+      padding: 40px 5%;
+      background-color: #f8f8f8;
+    }
+
+    .project-section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .project-section p, .project-section ul, .project-section pre {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .project-section ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    .project-section pre {
+      background-color: #eee;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+
+    .project-section img {
+      margin: 15px 0;
+      width: 100%;
+      max-width: 600px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Geri ox -->
+  <a href="index.html#projects" class="back-arrow">&#8592;</a>
+
+  <!-- PROJECT HEADER -->
+  <section class="project-header project-section">
+    <h1>Project 2: Employee Performance Dashboard</h1>
+    <p>Short description: Building a comprehensive dashboard to analyze employee performance, productivity, and HR metrics.</p>
+    <img src="images/project2.jpg" alt="Project 2" class="project-main-image">
+  </section>
+
+  <!-- INTRODUCTION -->
+  <section class="project-section">
+    <h2>Introduction</h2>
+    <p>
+      This project focuses on analyzing employee data including performance scores, satisfaction, and turnover rates.
+      The goal is to provide actionable insights for HR and management to improve productivity and retention.
+    </p>
+  </section>
+
+  <!-- OBJECTIVE -->
+  <section class="project-section">
+    <h2>Objective</h2>
+    <p>
+      The main objective is to create a dashboard that highlights key performance indicators (KPIs),
+      identifies trends, and helps management make informed decisions regarding workforce management.
+    </p>
+  </section>
+
+  <!-- DATA & TOOLS -->
+  <section class="project-section">
+    <h2>Data & Tools</h2>
+    <ul>
+      <li>Dataset: Employee performance and HR data</li>
+      <li>Tools: Python, Pandas, Matplotlib, Seaborn</li>
+      <li>SQL for data extraction</li>
+      <li>Power BI for visualization</li>
+    </ul>
+  </section>
+
+  <!-- METHODOLOGY -->
+  <section class="project-section">
+    <h2>Methodology</h2>
+    <p>
+      Data cleaning, feature engineering, and exploratory data analysis (EDA) were performed.
+      Key metrics such as average performance score, overtime hours, and resignation rate were analyzed.
+    </p>
+  </section>
+
+  <!-- CODE SNIPPETS -->
+  <section class="project-section">
+    <h2>SQL / Python Scripts</h2>
+    <p>Example of Python code used for analysis:</p>
+    <pre>
+import pandas as pd
+
+data = pd.read_csv("employee_data.csv")
+avg_perf = data.groupby('Department')['Avg_Performance_Score'].mean()
+print(avg_perf)
+    </pre>
+  </section>
+
+  <!-- VISUALIZATIONS -->
+  <section class="project-section">
+    <h2>Visualizations</h2>
+    <img src="images/project2_chart1.png" alt="Performance chart">
+    <img src="images/project2_chart2.png" alt="Department comparison chart">
+    <p>Charts show employee performance trends, departmental comparisons, and turnover analysis.</p>
+  </section>
+
+  <!-- INSIGHTS -->
+  <section class="project-section">
+    <h2>Insights & Conclusion</h2>
+    <ul>
+      <li>Departments with higher training hours had better average performance scores.</li>
+      <li>High overtime correlated with lower satisfaction scores.</li>
+      <li>Resignation rates were higher in departments with low average performance.</li>
+      <li>SQL and Python analysis helped management prioritize HR interventions.</li>
+    </ul>
+  </section>
+
+</body>
+</html>

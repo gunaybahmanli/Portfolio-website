@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 5 | Gunay Bahmanli</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Geri ox */
+    .back-arrow {
+      position: fixed;
+      top: 20px;
+      right: 1rem;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: #333;
+      background-color: #f8f8f8;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      transition: background-color 0.3s ease, color 0.3s ease;
+      z-index: 1000;
+      overflow: hidden;
+    }
+
+    .back-arrow:hover {
+      color: #7B5FFF;
+      background-color: #eaeaff;
+      transform: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .back-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1.8rem;
+        top: 1rem;
+        right: 1rem;
+      }
+    }
+
+    /* Project main image styling */
+    .project-main-image {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 12px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+
+    /* Project sections */
+    .project-section {
+      padding: 40px 5%;
+      background-color: #f8f8f8;
+    }
+
+    .project-section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .project-section p, .project-section ul, .project-section pre {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .project-section ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    .project-section pre {
+      background-color: #eee;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+
+    .project-section img {
+      margin: 15px 0;
+      width: 100%;
+      max-width: 600px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Geri ox -->
+  <a href="index.html#projects" class="back-arrow">&#8592;</a>
+
+  <!-- PROJECT HEADER -->
+  <section class="project-header project-section">
+    <h1>Project 5: Book Sales Analysis</h1>
+    <p>Short description: Analyzing book sales data from 2000-2016 to identify top authors, genres, and revenue trends.</p>
+    <img src="images/project5.jpg" alt="Project 5" class="project-main-image">
+  </section>
+
+  <!-- INTRODUCTION -->
+  <section class="project-section">
+    <h2>Introduction</h2>
+    <p>
+      This project explores historical book sales data including author ratings, genres, sales volume, and publisher revenue.
+      The aim is to understand market trends and identify top-performing authors and books.
+    </p>
+  </section>
+
+  <!-- OBJECTIVE -->
+  <section class="project-section">
+    <h2>Objective</h2>
+    <p>
+      To provide insights into book sales patterns over time, genre popularity, and publisher revenue contributions.
+    </p>
+  </section>
+
+  <!-- DATA & TOOLS -->
+  <section class="project-section">
+    <h2>Data & Tools</h2>
+    <ul>
+      <li>Dataset: Book sales between 2000-2016 with ratings and revenue data</li>
+      <li>Tools: Python, Pandas, Matplotlib, Seaborn, Power BI</li>
+      <li>Excel for preliminary analysis</li>
+    </ul>
+  </section>
+
+  <!-- METHODOLOGY -->
+  <section class="project-section">
+    <h2>Methodology</h2>
+    <p>
+      Data cleaning, aggregation by author and genre, and visualization of revenue, sales, and ratings were performed.
+      Dashboards were created to illustrate trends and top-selling books.
+    </p>
+  </section>
+
+  <!-- CODE SNIPPETS -->
+  <section class="project-section">
+    <h2>Python Scripts</h2>
+    <p>Example Python code to calculate total units sold per author:</p>
+    <pre>
+import pandas as pd
+
+data = pd.read_csv("book_sales.csv")
+author_sales = data.groupby('Author')['units_sold'].sum().sort_values(ascending=False)
+print(author_sales.head(10))
+    </pre>
+  </section>
+
+  <!-- VISUALIZATIONS -->
+  <section class="project-section">
+    <h2>Visualizations</h2>
+    <img src="images/project5_chart1.png" alt="Top authors chart">
+    <img src="images/project5_chart2.png" alt="Genre revenue chart">
+    <p>Charts illustrate top authors, bestselling books, genre performance, and revenue distribution.</p>
+  </section>
+
+  <!-- INSIGHTS -->
+  <section class="project-section">
+    <h2>Insights & Conclusion</h2>
+    <ul>
+      <li>Top authors consistently produce high-selling books across multiple genres.</li>
+      <li>Genre popularity shifts over time, impacting sales strategy.</li>
+      <li>Data-driven insights support publishers in marketing and stock decisions.</li>
+    </ul>
+  </section>
+
+</body>
+</html>
