@@ -83,7 +83,6 @@ body {
 .home-text p.objective {
   font-size: 1.1rem;
   line-height: 1.6;
-  z-index: 2;
 }
 
 .home-image {
@@ -105,7 +104,7 @@ body {
 
 /* Hover zamanı zoom effekti */
 .home-image img:hover {
-  transform: scale(1.1); /* 1.1 = 10% böyümə */
+  transform: scale(1.1); /* 1.05 = 5% böyümə */
   box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* optional: daha gözəl effek üçün shadow */
 }
 
